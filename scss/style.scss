@@ -1,0 +1,298 @@
+@import 'destyle';
+@import 'mixins';
+@import 'fonts';
+@import 'vars';
+
+body{
+    background-color: $background-color-primary;
+}
+.container{
+    width: 100%;
+    max-width: 1270px;
+    padding: 0 15px;
+    margin: 0 auto;
+    
+}
+.header{
+    &-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+}
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    padding: 40px 40px;
+    &-author{
+        @include font-primary(22px, $color-text-primary, 700, 24px);
+    }
+    &-logo-img{
+        display: block;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+}
+.nav{
+    background-color: $background-color-secondary;
+    border-radius: 20px;
+    &-list{
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+    }
+    &-item{
+        margin-right: 25px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &-link{
+        @include font-primary(18px, $color-text-secondary, 700, 25px);
+    }
+}
+.psychologist{ 
+    &-container{
+        display: flex;
+        align-items: center;
+        margin-top: 40px;
+        padding: 40px 40px;
+        
+    }
+    &-img{
+        display: block;
+        width: 200px * 2;
+        height: 220px * 2;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 160px;
+    }
+    &-paragraphs{
+        margin-top: 70px;
+    }
+    &-text{
+        @include font-primary(24px, $color-text-secondary, 500, 30px);
+        letter-spacing: 0.02em;
+        width: 580px;
+        margin-top: 10px;
+    }
+}
+.about-me{
+    &-container{
+        display: flex;
+        margin-top: 40px;
+        padding: 40px 40px;
+    }
+    &-img{
+        width: 180px *2;
+        height: 200px * 2;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    &-title{
+        @include font-primary(30px, $color-text-primary, 700, 35px);
+        text-align: center;
+    } 
+    &-paragraphs{
+        margin-top: 50px;
+    }
+    &-text{
+        @include font-secondary(24px, $color-text-secondary, 500, 30px);
+        width: 450px;
+        margin-right: 150px;
+        margin-top: 5px;
+        width: 600px;
+    }
+}
+.services{
+    &-container{
+        display: flex;
+        margin-top: 40px;
+        padding: 40px 40px;
+    }
+    &-content{
+        position: relative;
+        &::after{
+            content: '';
+            display: block;
+            border-radius: 50%;
+            border: 10px solid rgba(80, 159, 52, 0.25);
+            width: 500px;
+            height: 500px;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translate(0, -50%);
+
+        }
+    }
+    &-img{
+        width: 180px *2;
+        height: 200px * 2;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 150px;
+    }
+    &-title{
+        @include font-primary(30px, $color-text-primary, 700, 35px);
+    }
+    &-subtitle{
+        @include font-primary(26px, $color-text-primary, 500, 30px);
+        margin-top: 20px;
+    }
+    &-list{
+        margin-top: 20px;
+    }
+    &-item{
+        @include font-secondary(21px, $color-text-secondary, 400, 30px); 
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            background-image: url('../img/for-list.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }
+    &-text{
+        @include font-primary(24px, $color-text-primary, 500, 30px); 
+        margin-top: 20px;
+    }
+}
+.consultation{
+    &-container{
+        margin-top: 40px;
+        padding: 40px 40px;
+        display: flex;
+    }
+    &-title{
+        @include font-primary(30px, $color-text-primary, 700, 35px);
+    }
+    &-subtitle{
+        @include font-secondary(26px, $color-text-secondary, 500, 30px);
+        margin-top: 20px;
+    }
+    &-list{
+        margin-top: 20px;
+    }
+    &-item{
+        @include font-primary(21px, $color-text-primary, 400, 30px); 
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            background-image: url('../img/for-list.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+    }
+    &-img{
+        width: 200px *2;
+        height: 200px * 2;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+    &-text{
+        @include font-primary(24px, $color-text-primary, 500, 30px); 
+        margin-top: 20px;
+    }
+}
+.trainings{
+    &-container{
+        margin-top: 40px;
+        padding: 40px 40px;
+        display: flex;
+    }
+    &-title{
+        @include font-primary(30px, $color-text-primary, 700, 35px);
+    }
+    &-subtitle{
+        @include font-secondary(26px, $color-text-secondary, 500, 30px);
+        margin-top: 20px;
+    }
+    &-list{
+        margin-top: 20px;
+    }
+    &-item{
+        @include font-primary(21px, $color-text-primary, 400, 28px);
+        margin-top: 10px; 
+        display: flex;
+        align-items: center;
+        &::before{
+            content: '';
+            background-image: url('../img/for-list.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+            flex-shrink: 0;
+        }
+    }
+    &-text{
+        @include font-primary(24px, $color-text-primary, 500, 30px); 
+        margin-top: 20px;
+    }
+    &-img{
+        width: 240px *2;
+        height: 200px * 2;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 150px;
+    }
+}
+.footer{
+    &-container{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-around;
+    }
+    &-title{
+        @include font-secondary(26px, $color-text-secondary, 500, 30px);  
+    }
+    &-item{
+        @include font-primary(24px, $color-text-primary, 500, 30px); 
+        margin-top: 5px;
+    }
+}
+.social{
+    &-list{
+        display: flex;
+    }
+    &-item{
+        margin-right: 20px;
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    &-link{
+        display: block;
+        width: 35px;
+        height: 35px;
+        background-repeat: no-repeat;
+    }
+    &-link-instagram{
+        background-image: url('../img/instagram.svg');
+    }
+    &-link-facebook{
+        background-image: url('../img/facebook.svg');
+    }
+    &-link-telegram{
+        background-image: url('../img/telegram.svg');
+    }
+    &-link-viber{
+        background-image: url('../img/viber.svg');
+    }
+}
