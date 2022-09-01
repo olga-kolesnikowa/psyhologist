@@ -5,6 +5,9 @@
 
 body{
     background-color: $background-color-primary;
+    // background-image: url('../img/waves.png');
+    // background-repeat: no-repeat;
+    // background-size: cover;
 }
 .container{
     width: 100%;
@@ -17,7 +20,10 @@ body{
     &-container{
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between; 
+    // background: linear-gradient(120.93deg, #81a873 57.11%, #9ed689 67.28%);
+    // border-radius: 20px;
+    // padding: 1px 1px; 
 }
 }
 .header-content{
@@ -111,22 +117,22 @@ body{
         margin-top: 40px;
         padding: 40px 40px;
     }
-    &-content{
-        position: relative;
-        &::after{
-            content: '';
-            display: block;
-            border-radius: 50%;
-            border: 10px solid rgba(80, 159, 52, 0.25);
-            width: 500px;
-            height: 500px;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translate(0, -50%);
+    // &-content{
+    //     position: relative;
+    //     &::after{
+    //         content: '';
+    //         display: block;
+    //         border-radius: 50%;
+    //         border: 10px solid rgba(80, 159, 52, 0.25);
+    //         width: 500px;
+    //         height: 500px;
+    //         position: absolute;
+    //         right: 0;
+    //         top: 50%;
+    //         transform: translate(0, -50%);
 
-        }
-    }
+    //     }
+    // }
     &-img{
         width: 180px *2;
         height: 200px * 2;
@@ -285,6 +291,8 @@ body{
     }
     &-link-instagram{
         background-image: url('../img/instagram.svg');
+        width: 40px;
+        height: 40px;
     }
     &-link-facebook{
         background-image: url('../img/facebook.svg');
@@ -294,5 +302,8 @@ body{
     }
     &-link-viber{
         background-image: url('../img/viber.svg');
+    }
+    &-link-watsapp{
+        background-image: url('../img/watsapp.png');
     }
 }
