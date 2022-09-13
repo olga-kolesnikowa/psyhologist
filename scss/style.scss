@@ -2,36 +2,53 @@
 @import 'mixins';
 @import 'fonts';
 @import 'vars';
+@import 'hamburgers';
 
+
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color: $background-color-primary;
-    // background-image: url('../img/waves.png');
-    // background-repeat: no-repeat;
-    // background-size: cover;
 }
 .container{
     width: 100%;
-    max-width: 1270px;
+    max-width: 1280px;
     padding: 0 15px;
     margin: 0 auto;
-    
 }
 .header{
+    padding: 15px 0;
     &-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    // background: linear-gradient(120.93deg, #81a873 57.11%, #9ed689 67.28%);
-    // border-radius: 20px;
-    // padding: 1px 1px; 
-}
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+    }
 }
 .header-content{
     display: flex;
     align-items: center;
-    padding: 40px 40px;
+    @include for-tablet-portrait-up {
+        width: 100%;
+    }
+    .hamburger{
+        margin-left: auto;
+        display: none;
+        @include for-tablet-portrait-up{
+            display: block;
+        }
+        @include for-tablet-landscape-up{
+            display: block;
+        }
+    }  
     &-author{
-        @include font-primary(22px, $color-text-primary, 700, 24px);
+        @include font-primary(22px, $color-text-primary, 500, 34px);
+        &:hover{
+            color: #3ec110;
+            transition-duration: 0.25s;
+            transition-property: all;
+            transition-timing-function: linear;
+        }
     }
     &-logo-img{
         display: block;
@@ -41,117 +58,368 @@ body{
     }
 }
 .nav{
-    background-color: $background-color-secondary;
-    border-radius: 20px;
+    @include for-tablet-portrait-up{
+        display: none;
+    }
+    @include for-tablet-landscape-up{
+        display: none;
+    }
     &-list{
         display: flex;
         align-items: center;
-        padding: 10px 20px;
     }
     &-item{
         margin-right: 25px;
         &:last-child{
             margin-right: 0;
         }
+        
     }
     &-link{
-        @include font-primary(18px, $color-text-secondary, 700, 25px);
+        display: block;
+        @include font-primary(19px, $color-text-primary, 500, 22px);
+        background-color: $background-color-secondary; 
+        padding: 5px 10px;
+        box-shadow: 0px 15px 25px rgba(0, 185, 182, 0.05);
+        border-radius: 6px;
+        transition-duration: 0.25s;
+        transition-property: all;
+        transition-timing-function: linear;
+        &:hover{
+            background-color: rgba(251, 229, 227, 0.7);
+        }
     }
 }
-.psychologist{ 
-    &-container{
+.nav-mobile{
+    position: fixed;
+    background-color: $background-color-hamburger-primary;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    &.is-active{
+        display: block;
+    }
+    &-link{
+        @include font-primary(30px, $color-text-primary, 500, 45px); 
+        &:hover{
+            color: $color-text-active-hamburger;
+            transition-duration: 0.25s;
+            transition-property: all;
+            transition-timing-function: linear;
+        }
+    }
+    &-item{
+        margin-top: 20px;
+        padding: 5px 8px;
+    }
+    &-content{
         display: flex;
-        align-items: center;
-        margin-top: 40px;
-        padding: 40px 40px;
-        
+        margin-top: 20px;
+        padding: 10px 10px;
     }
     &-img{
         display: block;
-        width: 200px * 2;
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+    }
+    &-title{
+        @include font-primary(35px, $color-text-primary, 500, 45px); 
+    }
+}
+.psychologist{ 
+    margin-top: 60px;
+    @include for-tablet-landscape-up{
+        margin-top: 20px;
+    }
+    &-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        @include for-tablet-landscape-up{
+            flex-direction: column; 
+        }
+    }
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        width: 210px *2;
         height: 220px * 2;
-        object-fit: cover;
         border-radius: 20px;
-        margin-right: 160px;
+        overflow: hidden;
+        @include for-middle-tablet-up{
+            max-width: 170px *2;
+           height: 190px *2;
+        }
+        @include for-tablet-landscape-up{
+            max-width: 200px *2;
+            height: 220px *2;
+            order: 2;
+            margin-top: 30px;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 180px *2;
+            height: 200px *2;
+        }
+    }
+    &-img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
     &-paragraphs{
         margin-top: 70px;
+        @include for-tablet-landscape-up{
+            margin-top: 40px;
+        }
+    }
+    &-title{
+        @include font-primary(48px, $color-text-primary, 700, 57px);
+        text-align: center;
+        @include for-desktop-up{
+            @include font-primary(42px, $color-text-primary, 700, 50px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(35px, $color-text-primary, 700, 50px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(48px, $color-text-primary, 700, 57px); 
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(42px, $color-text-primary, 700, 50px);
+        }
+    }
+    &-title-desktop{
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        @include for-tablet-landscape-up{
+            display: block;
+            order: 1;
+        }
     }
     &-text{
-        @include font-primary(24px, $color-text-secondary, 500, 30px);
+        @include font-primary(24px, $color-text-secondary, 500, 32px);
         letter-spacing: 0.02em;
-        width: 580px;
+        max-width: 580px;
         margin-top: 10px;
+        @include for-desktop-up{
+            @include font-primary(20px, $color-text-secondary, 500, 32px);
+            max-width: 500px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(20px, $color-text-secondary, 500, 28px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(24px, $color-text-secondary, 500, 32px);
+            max-width: 650px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(20px, $color-text-secondary, 500, 28px);
+            max-width: 500px;
+        }
+    }
+    &-content{
+        @include for-tablet-landscape-up{
+            order: 3;
+        }
     }
 }
 .about-me{
+    margin-top: 60px;
     &-container{
         display: flex;
-        margin-top: 40px;
-        padding: 40px 40px;
+        justify-content: space-around;
+        @include for-tablet-landscape-up{
+            flex-direction: column;  
+            align-items: center;
+        }
+    }
+    &-content{
+        @include for-tablet-landscape-up{
+            order: 3;  
+        }
+    }
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        margin-top: 30px;
+        width: 200px *2;
+        height: 220px * 2;
+        border-radius: 20px;
+        overflow: hidden;
+        @include for-middle-tablet-up{
+            max-width: 170px *2;
+            height: 190px *2;
+         }
+         @include for-tablet-landscape-up{
+            order: 2;  
+            max-width: 200px *2;
+            height: 220px * 2;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 180px *2;
+            height: 200px * 2;
+        }
     }
     &-img{
-        width: 180px *2;
-        height: 200px * 2;
+        display: block;
         object-fit: cover;
-        border-radius: 20px;
+        width: 100%;
+        height: 100%;
     }
     &-title{
-        @include font-primary(30px, $color-text-primary, 700, 35px);
+        @include font-primary(48px, $color-text-primary, 700, 57px);
         text-align: center;
+        @include for-desktop-up{
+            @include font-primary(32px, $color-text-primary, 700, 38px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(27px, $color-text-primary, 700, 37px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(48px, $color-text-primary, 700, 57px);
+            margin-top: 40px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(33px, $color-text-primary, 700, 40px);
+        }
     } 
+    &-title-desktop{
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        @include for-tablet-landscape-up{
+            display: block;
+            order: 1;
+        }
+    }
     &-paragraphs{
         margin-top: 50px;
     }
     &-text{
-        @include font-secondary(24px, $color-text-secondary, 500, 30px);
-        width: 450px;
-        margin-right: 150px;
+        @include font-secondary(24px, $color-text-secondary, 500, 32px);
         margin-top: 5px;
-        width: 600px;
+        max-width: 600px;
+        @include for-desktop-up{
+            @include font-primary(20px, $color-text-secondary, 500, 32px);
+            max-width: 550px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(20px, $color-text-secondary, 500, 28px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-secondary(24px, $color-text-secondary, 500, 32px);
+            max-width: 650px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(20px, $color-text-secondary, 500, 28px);
+            max-width: 500px;
+        }
     }
 }
 .services{
+    margin-top: 60px;
     &-container{
         display: flex;
-        margin-top: 40px;
-        padding: 40px 40px;
+        justify-content: space-around;
+        @include for-tablet-landscape-up{
+            flex-direction: column;  
+            align-items: center;
+        }
     }
-    // &-content{
-    //     position: relative;
-    //     &::after{
-    //         content: '';
-    //         display: block;
-    //         border-radius: 50%;
-    //         border: 10px solid rgba(80, 159, 52, 0.25);
-    //         width: 500px;
-    //         height: 500px;
-    //         position: absolute;
-    //         right: 0;
-    //         top: 50%;
-    //         transform: translate(0, -50%);
-
-    //     }
-    // }
-    &-img{
-        width: 180px *2;
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        margin-top: 30px;
+        max-width: 200px *2;
         height: 200px * 2;
-        object-fit: cover;
         border-radius: 20px;
-        margin-right: 150px;
+        overflow: hidden;
+        margin-right: 30px;
+        @include for-middle-tablet-up{
+            max-width: 170px *2;
+            height: 190px *2;
+         }
+        @include for-tablet-landscape-up{
+            max-width: 200px *2;
+            height: 200px * 2;
+            order: 2;
+            margin-right: 0;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 200px *2;
+            height: 180px * 2;
+        }
+    }
+    &-img{
+        display: block;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
     }
     &-title{
-        @include font-primary(30px, $color-text-primary, 700, 35px);
+        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include for-desktop-up{
+            @include font-primary(33px, $color-text-primary, 700, 35px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(27px, $color-text-primary, 700, 37px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(43px, $color-text-primary, 700, 55px);
+            margin-top: 40px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(27px, $color-text-primary, 700, 37px);
+        }
+    }
+    &-title-desktop{
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        text-align: center;
+        @include for-tablet-landscape-up{
+            display: block;
+            order: 1;
+            
+        }
     }
     &-subtitle{
-        @include font-primary(26px, $color-text-primary, 500, 30px);
+        @include font-primary(26px, $color-text-secondary, 500, 30px);
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(23px, $color-text-secondary, 500, 32px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(26px, $color-text-secondary, 500, 30px);
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(23px, $color-text-secondary, 500, 32px);
+        }
     }
     &-list{
         margin-top: 20px;
     }
     &-item{
-        @include font-secondary(21px, $color-text-secondary, 400, 30px); 
+        @include font-secondary(20px, $color-text-primary, 400, 30px); 
         margin-top: 10px;
         display: flex;
         align-items: center;
@@ -165,30 +433,102 @@ body{
             height: 20px;
             margin-right: 5px;
         }
+        @include for-desktop-up{
+            @include font-primary(20px, $color-text-primary, 400, 32px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(19px, $color-text-primary, 400, 28px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(21px, $color-text-primary, 400, 30px); 
+            margin-top: 10px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(19px, $color-text-primary, 400, 28px);
+        }
     }
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(21px, $color-text-primary, 500, 30px);  
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(24px, $color-text-primary, 500, 30px); 
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(22px, $color-text-primary, 500, 30px); 
+        }
+    }
+    &-content{
+        max-width: 650px;
+        order: 3;
     }
 }
 .consultation{
+    margin-top: 60px;
     &-container{
-        margin-top: 40px;
-        padding: 40px 40px;
         display: flex;
+        justify-content: space-between;
+        @include for-tablet-landscape-up{
+            flex-direction: column;
+            align-items: center;
+        }
     }
     &-title{
-        @include font-primary(30px, $color-text-primary, 700, 35px);
+        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include for-desktop-up{
+            @include font-primary(33px, $color-text-primary, 700, 35px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(27px, $color-text-primary, 700, 37px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(48px, $color-text-primary, 700, 57px);
+            margin-top: 40px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(27px, $color-text-primary, 700, 37px); 
+        }
+    }
+    &-title-desktop{
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        text-align: center;
+        @include for-tablet-landscape-up{
+            display: block;
+            order: 1;  
+        }
     }
     &-subtitle{
         @include font-secondary(26px, $color-text-secondary, 500, 30px);
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(23px, $color-text-secondary, 500, 32px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-secondary(26px, $color-text-secondary, 500, 30px);
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px); 
+        }
     }
     &-list{
         margin-top: 20px;
     }
     &-item{
-        @include font-primary(21px, $color-text-primary, 400, 30px); 
+        @include font-primary(20px, $color-text-primary, 400, 30px); 
         margin-top: 10px;
         display: flex;
         align-items: center;
@@ -202,30 +542,129 @@ body{
             height: 20px;
             margin-right: 5px;
         }
+        @include for-desktop-up{
+            @include font-primary(20px, $color-text-primary, 400, 32px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(19px, $color-text-primary, 400, 28px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(21px, $color-text-primary, 400, 30px); 
+            margin-top: 10px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(20px, $color-text-primary, 400, 28px); 
+        }
+    }
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        margin-top: 30px;
+        max-width: 200px *2;
+        height: 200px * 2;
+        border-radius: 20px;
+        overflow: hidden;
+        @include for-middle-tablet-up{
+            max-width: 190px *2;
+            height: 190px *2;
+         }
+         @include for-tablet-landscape-up{
+            order: 2;
+            max-width: 200px *2;
+            height: 200px * 2;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 200px *2;
+            height: 180px * 2;
+        }
     }
     &-img{
-        width: 200px *2;
-        height: 200px * 2;
+        display: block;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        border-radius: 20px;
     }
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(21px, $color-text-primary, 500, 30px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(21px, $color-text-primary, 500, 30px); 
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(24px, $color-text-primary, 500, 30px); 
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(22px, $color-text-primary, 500, 30px); 
+        }
+    }
+    &-content{
+        max-width: 700px;
+        @include for-tablet-landscape-up{
+            order: 3;
+        }
     }
 }
 .trainings{
+    margin-top: 60px;
     &-container{
-        margin-top: 40px;
-        padding: 40px 40px;
         display: flex;
+        justify-content: space-between;
+        @include for-tablet-landscape-up{
+            align-items: center;
+            flex-direction: column;
+        }
     }
     &-title{
-        @include font-primary(30px, $color-text-primary, 700, 35px);
+        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include for-desktop-up{
+            @include font-primary(30px, $color-text-primary, 700, 38px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(25px, $color-text-primary, 700, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(48px, $color-text-primary, 700, 57px);
+            margin-top: 40px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(27px, $color-text-primary, 700, 35px); 
+        }
+    }
+    &-title-desktop{
+        @include for-tablet-landscape-up{
+            display: none;
+        }
+    }
+    &-title-mobile{
+        display: none;
+        text-align: center;
+        @include for-tablet-landscape-up{
+            display: block;
+            order: 1;  
+        }
     }
     &-subtitle{
         @include font-secondary(26px, $color-text-secondary, 500, 30px);
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(21px, $color-text-secondary, 500, 30px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-secondary(26px, $color-text-secondary, 500, 30px);
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px);
+        }
     }
     &-list{
         margin-top: 20px;
@@ -246,36 +685,185 @@ body{
             margin-right: 5px;
             flex-shrink: 0;
         }
+        @include for-desktop-up{
+            @include font-primary(19px, $color-text-primary, 400, 32px);
+            margin-top: 10px;
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(18px, $color-text-primary, 400, 28px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(21px, $color-text-primary, 400, 28px);
+            margin-top: 10px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(19px, $color-text-primary, 400, 28px);
+        }
     }
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(21px, $color-text-primary, 500, 30px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(20px, $color-text-primary, 500, 30px); 
+        }   
+        @include for-tablet-landscape-up{
+            @include font-primary(24px, $color-text-primary, 500, 30px); 
+            margin-top: 20px;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(22px, $color-text-primary, 500, 30px); 
+        }
+    }
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        margin-top: 30px;
+        max-width: 250px *2;
+        height: 200px * 2;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 50px;
+        @include for-desktop-up{
+            margin-right: 30px;
+        }
+        @include for-middle-tablet-up{
+            max-width: 200px *2;
+            height: 180px *2;
+        }
+        @include for-tablet-landscape-up{
+            max-width: 240px *2;
+            height: 200px * 2;
+            order: 2;
+            margin-right: 0;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 200px *2;
+            height: 180px * 2;
+        }
     }
     &-img{
-        width: 240px *2;
-        height: 200px * 2;
+        display: block;
         object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &-content{
+        max-width: 650px;
+        order: 3;
+    }
+}
+.intro{
+    margin-top: 40px;
+    &-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include for-tablet-landscape-up{
+            flex-direction: column;
+        }
+        
+    }
+    &-title{
+        @include font-primary(35px, $color-text-primary, 700, 45px);
+        margin-top: 20px;
+        @include for-desktop-up{
+            @include font-primary(30px, $color-text-primary, 700, 38px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(23px, $color-text-primary, 700, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(40px, $color-text-primary, 700, 50px);
+            text-align: center;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(27px, $color-text-primary, 700, 35px); 
+        }
+    }
+    &-subtitle{
+        @include font-primary(25px, $color-text-secondary, 500, 35px);
+        margin-top: 30px;
+        @include for-desktop-up{
+            @include font-primary(21px, $color-text-secondary, 500, 30px);
+        }
+        @include for-middle-tablet-up{
+            @include font-primary(23px, $color-text-secondary, 500, 35px);
+        }
+        @include for-tablet-landscape-up{
+            @include font-secondary(25px, $color-text-secondary, 500, 35px);
+            text-align: center;
+        }
+        @include for-tablet-portrait-up{
+            @include font-primary(21px, $color-text-secondary, 500, 35px);
+        }
+    }
+    &-figure{
+        display: flex;
+        flex-shrink: 0;
+        margin-top: 30px;
+        max-width: 680px;
+        height: 460px;
         border-radius: 20px;
-        margin-right: 150px;
+        overflow: hidden;
+        @include for-desktop-up{
+            max-width: 300px *2;
+            height: 220px *2;
+        }
+        @include for-middle-tablet-up{
+            max-width: 240px *2;
+            height: 200px *2;
+        }
+        @include for-tablet-landscape-up{
+            max-width: 260px *2;
+            height: 200px * 2;
+        }
+        @include for-tablet-portrait-up{
+            max-width: 200px *2;
+            height: 180px *2;
+        }
+    }
+    &-img{
+        display: block;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
     }
 }
 .footer{
     &-container{
-        margin-top: 30px;
+        margin-top: 50px;
         display: flex;
         justify-content: space-around;
     }
     &-title{
-        @include font-secondary(26px, $color-text-secondary, 500, 30px);  
+        @include font-secondary(26px, $color-text-secondary, 500, 32px);  
+        @include for-middle-tablet-up{
+            @include font-primary(24px, $color-text-primary, 500, 20px); 
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(22px, $color-text-primary, 500, 30px); 
+        }
     }
     &-item{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 5px;
+        @include for-middle-tablet-up{
+            @include font-primary(22px, $color-text-primary, 500, 28px); 
+        }
+        @include for-tablet-landscape-up{
+            @include font-primary(18px, $color-text-primary, 500, 28px); 
+        }
     }
 }
 .social{
     &-list{
         display: flex;
+        @include for-tablet-portrait-up{
+            flex-wrap: wrap;
+        }
     }
     &-item{
         margin-right: 20px;
@@ -305,5 +893,6 @@ body{
     }
     &-link-watsapp{
         background-image: url('../img/watsapp.png');
+        background-size: cover;
     }
 }

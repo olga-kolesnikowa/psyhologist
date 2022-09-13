@@ -1,155 +1,246 @@
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Bold.eot');
-    src: url('Rosario-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Bold.woff2') format('woff2'),
-        url('Rosario-Bold.woff') format('woff'),
-        url('Rosario-Bold.ttf') format('truetype'),
-        url('Rosario-Bold.svg#Rosario-Bold') format('svg');
-    font-weight: bold;
+    font-family: 'Inter';
+    src: url('Inter-Thin.eot');
+    src: url('Inter-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Thin.woff2') format('woff2'),
+        url('Inter-Thin.woff') format('woff'),
+        url('Inter-Thin.ttf') format('truetype'),
+        url('Inter-Thin.svg#Inter-Thin') format('svg');
+    font-weight: 100;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Italic.eot');
-    src: url('Rosario-Italic.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Italic.woff2') format('woff2'),
-        url('Rosario-Italic.woff') format('woff'),
-        url('Rosario-Italic.ttf') format('truetype'),
-        url('Rosario-Italic.svg#Rosario-Italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-BoldItalic.eot');
-    src: url('Rosario-BoldItalic.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-BoldItalic.woff2') format('woff2'),
-        url('Rosario-BoldItalic.woff') format('woff'),
-        url('Rosario-BoldItalic.ttf') format('truetype'),
-        url('Rosario-BoldItalic.svg#Rosario-BoldItalic') format('svg');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Regular.eot');
-    src: url('Rosario-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Regular.woff2') format('woff2'),
-        url('Rosario-Regular.woff') format('woff'),
-        url('Rosario-Regular.ttf') format('truetype'),
-        url('Rosario-Regular.svg#Rosario-Regular') format('svg');
-    font-weight: normal;
+    font-family: 'Inter';
+    src: url('Inter-Light.eot');
+    src: url('Inter-Light.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Light.woff2') format('woff2'),
+        url('Inter-Light.woff') format('woff'),
+        url('Inter-Light.ttf') format('truetype'),
+        url('Inter-Light.svg#Inter-Light') format('svg');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-BoldItalic_1.eot');
-    src: url('Rosario-BoldItalic_1.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-BoldItalic_1.woff2') format('woff2'),
-        url('Rosario-BoldItalic_1.woff') format('woff'),
-        url('Rosario-BoldItalic_1.ttf') format('truetype'),
-        url('Rosario-BoldItalic_1.svg#Rosario-BoldItalic') format('svg');
-    font-weight: bold;
+    font-family: 'Inter';
+    src: url('Inter-MediumItalic.eot');
+    src: url('Inter-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-MediumItalic.woff2') format('woff2'),
+        url('Inter-MediumItalic.woff') format('woff'),
+        url('Inter-MediumItalic.ttf') format('truetype'),
+        url('Inter-MediumItalic.svg#Inter-MediumItalic') format('svg');
+    font-weight: 500;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Regular_1.eot');
-    src: url('Rosario-Regular_1.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Regular_1.woff2') format('woff2'),
-        url('Rosario-Regular_1.woff') format('woff'),
-        url('Rosario-Regular_1.ttf') format('truetype'),
-        url('Rosario-Regular_1.svg#Rosario-Regular') format('svg');
-    font-weight: normal;
+    font-family: 'Inter';
+    src: url('Inter-LightItalic.eot');
+    src: url('Inter-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-LightItalic.woff2') format('woff2'),
+        url('Inter-LightItalic.woff') format('woff'),
+        url('Inter-LightItalic.ttf') format('truetype'),
+        url('Inter-LightItalic.svg#Inter-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Medium.eot');
+    src: url('Inter-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Medium.woff2') format('woff2'),
+        url('Inter-Medium.woff') format('woff'),
+        url('Inter-Medium.ttf') format('truetype'),
+        url('Inter-Medium.svg#Inter-Medium') format('svg');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Regular_2.eot');
-    src: url('Rosario-Regular_2.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Regular_2.woff2') format('woff2'),
-        url('Rosario-Regular_2.woff') format('woff'),
-        url('Rosario-Regular_2.ttf') format('truetype'),
-        url('Rosario-Regular_2.svg#Rosario-Regular') format('svg');
+    font-family: 'Inter';
+    src: url('Inter-Regular.eot');
+    src: url('Inter-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Regular.woff2') format('woff2'),
+        url('Inter-Regular.woff') format('woff'),
+        url('Inter-Regular.ttf') format('truetype'),
+        url('Inter-Regular.svg#Inter-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-BoldItalic_2.eot');
-    src: url('Rosario-BoldItalic_2.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-BoldItalic_2.woff2') format('woff2'),
-        url('Rosario-BoldItalic_2.woff') format('woff'),
-        url('Rosario-BoldItalic_2.ttf') format('truetype'),
-        url('Rosario-BoldItalic_2.svg#Rosario-BoldItalic') format('svg');
+    font-family: 'Inter';
+    src: url('Inter-ThinItalic.eot');
+    src: url('Inter-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ThinItalic.woff2') format('woff2'),
+        url('Inter-ThinItalic.woff') format('woff'),
+        url('Inter-ThinItalic.ttf') format('truetype'),
+        url('Inter-ThinItalic.svg#Inter-ThinItalic') format('svg');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Italic.eot');
+    src: url('Inter-Italic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Italic.woff2') format('woff2'),
+        url('Inter-Italic.woff') format('woff'),
+        url('Inter-Italic.ttf') format('truetype'),
+        url('Inter-Italic.svg#Inter-Italic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-SemiBoldItalic.eot');
+    src: url('Inter-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-SemiBoldItalic.woff2') format('woff2'),
+        url('Inter-SemiBoldItalic.woff') format('woff'),
+        url('Inter-SemiBoldItalic.ttf') format('truetype'),
+        url('Inter-SemiBoldItalic.svg#Inter-SemiBoldItalic') format('svg');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-SemiBold.eot');
+    src: url('Inter-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Inter-SemiBold.woff2') format('woff2'),
+        url('Inter-SemiBold.woff') format('woff'),
+        url('Inter-SemiBold.ttf') format('truetype'),
+        url('Inter-SemiBold.svg#Inter-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-ExtraLightItalic.eot');
+    src: url('Inter-ExtraLightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ExtraLightItalic.woff2') format('woff2'),
+        url('Inter-ExtraLightItalic.woff') format('woff'),
+        url('Inter-ExtraLightItalic.ttf') format('truetype'),
+        url('Inter-ExtraLightItalic.svg#Inter-ExtraLightItalic') format('svg');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-Black.eot');
+    src: url('Inter-Black.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Black.woff2') format('woff2'),
+        url('Inter-Black.woff') format('woff'),
+        url('Inter-Black.ttf') format('truetype'),
+        url('Inter-Black.svg#Inter-Black') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-BoldItalic.eot');
+    src: url('Inter-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-BoldItalic.woff2') format('woff2'),
+        url('Inter-BoldItalic.woff') format('woff'),
+        url('Inter-BoldItalic.ttf') format('truetype'),
+        url('Inter-BoldItalic.svg#Inter-BoldItalic') format('svg');
     font-weight: bold;
     font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Bold_1.eot');
-    src: url('Rosario-Bold_1.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Bold_1.woff2') format('woff2'),
-        url('Rosario-Bold_1.woff') format('woff'),
-        url('Rosario-Bold_1.ttf') format('truetype'),
-        url('Rosario-Bold_1.svg#Rosario-Bold') format('svg');
+    font-family: 'Inter';
+    src: url('Inter-ExtraLight.eot');
+    src: url('Inter-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ExtraLight.woff2') format('woff2'),
+        url('Inter-ExtraLight.woff') format('woff'),
+        url('Inter-ExtraLight.ttf') format('truetype'),
+        url('Inter-ExtraLight.svg#Inter-ExtraLight') format('svg');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-ExtraBold.eot');
+    src: url('Inter-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ExtraBold.woff2') format('woff2'),
+        url('Inter-ExtraBold.woff') format('woff'),
+        url('Inter-ExtraBold.ttf') format('truetype'),
+        url('Inter-ExtraBold.svg#Inter-ExtraBold') format('svg');
     font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Italic_1.eot');
-    src: url('Rosario-Italic_1.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Italic_1.woff2') format('woff2'),
-        url('Rosario-Italic_1.woff') format('woff'),
-        url('Rosario-Italic_1.ttf') format('truetype'),
-        url('Rosario-Italic_1.svg#Rosario-Italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Italic_2.eot');
-    src: url('Rosario-Italic_2.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Italic_2.woff2') format('woff2'),
-        url('Rosario-Italic_2.woff') format('woff'),
-        url('Rosario-Italic_2.ttf') format('truetype'),
-        url('Rosario-Italic_2.svg#Rosario-Italic') format('svg');
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Rosario';
-    src: url('Rosario-Bold_2.eot');
-    src: url('Rosario-Bold_2.eot?#iefix') format('embedded-opentype'),
-        url('Rosario-Bold_2.woff2') format('woff2'),
-        url('Rosario-Bold_2.woff') format('woff'),
-        url('Rosario-Bold_2.ttf') format('truetype'),
-        url('Rosario-Bold_2.svg#Rosario-Bold') format('svg');
+    font-family: 'Inter';
+    src: url('Inter-Bold.eot');
+    src: url('Inter-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Inter-Bold.woff2') format('woff2'),
+        url('Inter-Bold.woff') format('woff'),
+        url('Inter-Bold.ttf') format('truetype'),
+        url('Inter-Bold.svg#Inter-Bold') format('svg');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-BlackItalic.eot');
+    src: url('Inter-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-BlackItalic.woff2') format('woff2'),
+        url('Inter-BlackItalic.woff') format('woff'),
+        url('Inter-BlackItalic.ttf') format('truetype'),
+        url('Inter-BlackItalic.svg#Inter-BlackItalic') format('svg');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('Inter-ExtraBoldItalic.eot');
+    src: url('Inter-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Inter-ExtraBoldItalic.woff2') format('woff2'),
+        url('Inter-ExtraBoldItalic.woff') format('woff'),
+        url('Inter-ExtraBoldItalic.ttf') format('truetype'),
+        url('Inter-ExtraBoldItalic.svg#Inter-ExtraBoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter V';
+    src: url('InterV.eot');
+    src: url('InterV.eot?#iefix') format('embedded-opentype'),
+        url('InterV.woff2') format('woff2'),
+        url('InterV.woff') format('woff'),
+        url('InterV.ttf') format('truetype'),
+        url('InterV.svg#InterV') format('svg');
+    font-weight: normal;
     font-style: normal;
     font-display: swap;
 }

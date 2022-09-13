@@ -15,12 +15,17 @@
     <header class="header">
         <div class="container header-container">
             <div class="header-content">
-                    <figure class="header-content-logo-figure">
-                        <img class="header-content-logo-img" src="img/3143057.png">
-                    </figure>
-                <h2 class="header-content-author">
-                    Юлія Корой
-                </h2>
+                <figure class="header-content-logo-figure">
+                    <img class="header-content-logo-img" src="img/3143057.png">
+                </figure>
+                <a class="header-content-author" href="#">
+                    Психолог
+                </a>
+                <button class="hamburger hamburger--collapse" type="button">
+                    <span class="hamburger-box">
+                      <span class="hamburger-inner"></span>
+                    </span>
+                </button>
             </div>
             <nav class="nav">
                 <ul class="nav-list">
@@ -31,26 +36,70 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#services">
-                            Психологічні консультації
+                            Консультації
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#consultation">
-                            Консультації з ароматерапії
+                            Ароматерапія
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#trainings">
-                            Психологічні тренінги
+                            Тренінги
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="#contacts">
                             Контакти
                         </a>
                     </li>
                 </ul>
             </nav>
+            <div class="nav-mobile js-nav-mobile">
+                <header class="nav-mobile-header">
+                <div class="nav-mobile-content">
+                    <figure class="nav-mobile-figure">
+                        <img class="nav-mobile-img" src="img/3143057.png">
+                    </figure>
+                    <h3 class="nav-mobile-title">
+                        Психолог-ароматерапевт
+                    </h3>
+                </div>
+                    <button class="hamburger hamburger--collapse" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </header>
+                <ul class="nav-mobile-list">
+                    <li class="nav-mobile-item">
+                        <a class="nav-mobile-link" href="#about-me">
+                            Про мене
+                        </a>
+                    </li>
+                    <li class="nav-mobile-item">
+                        <a class="nav-mobile-link" href="#services">
+                            Психологічні консультації
+                        </a>
+                    </li>
+                    <li class="nav-mobile-item">
+                        <a class="nav-mobile-link" href="#consultation">
+                            Консультації з ароматерапії
+                        </a>
+                    </li>
+                    <li class="nav-mobile-item">
+                        <a class="nav-mobile-link" href="#trainings">
+                            Психологічні тренінги
+                        </a>
+                    </li>
+                    <li class="nav-mobile-item">
+                        <a class="nav-mobile-link" href="#contacts">
+                            Контакти
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -59,10 +108,9 @@
                 <figure class="psychologist-figure">
                     <img class="psychologist-img" src="img/psyhologist-yuliia.JPG"></img>
                 </figure>
-                <div class="psychologist-intro">
-                   <figure class="psychologist-intro-figure">
-                    <img class="psychologist-intro-img" src="img/marck-script.regular.png">
-                   </figure>
+                <h2 class="psychologist-title psychologist-title-mobile">Юлія Корой</h2>
+                <div class="psychologist-content">
+                   <h2 class="psychologist-title psychologist-title-desktop">Юлія Корой</h2>
                    <div class="psychologist-paragraphs">
                         <p class="psychologist-text">
                             Психолог, ароматерапевт. Консультант з етичного догляду
@@ -82,8 +130,11 @@
         </section>
         <section class="about-me" id="about-me">
             <div class="container about-me-container">
+                <h2 class="about-me-title about-me-title-mobile">
+                    Про мене
+                </h2>
                 <div class="about-me-content">
-                    <h1 class="about-me-title">
+                    <h1 class="about-me-title about-me-title-desktop">
                         Про мене
                     </h1>
                     <div class="about-me-paragraphs">
@@ -115,9 +166,9 @@
                         </p>
                     </div>
                 </div>
-                    <figure class="about-me-figure">
-                        <img class="about-me-img" src="img/about-me-yuliia2.JPG">
-                    </figure>  
+                <figure class="about-me-figure">
+                    <img class="about-me-img" src="img/about-me-yuliia2.JPG">
+                </figure>  
             </div>
         </section>
         <section class="services" id="services">
@@ -125,8 +176,11 @@
                 <figure class="services-figure">
                     <img class="services-img" src="img/psyhologis-consultation.jpg">
                 </figure>
+                <h2 class="services-title services-title-mobile">
+                    Індивідуальні психологічні консультації
+                </h2>
                 <div class="services-content">
-                    <h2 class="services-title">
+                    <h2 class="services-title services-title-desktop">
                         Індивідуальні психологічні консультації
                     </h2>
                         <h3 class="services-subtitle">
@@ -161,8 +215,11 @@
         </section>
         <section class="consultation" id="consultation">
             <div class="container consultation-container">
+                <h2 class="consultation-title consultation-title-mobile">
+                    Консультації з ароматерапії
+                </h2>
                 <div class="consultation-content">
-                    <h2 class="consultation-title">
+                    <h2 class="consultation-title consultation-title-desktop">
                         Консультації з ароматерапії
                     </h2>
                     <h3 class="consultation-subtitle">
@@ -214,10 +271,13 @@
         <section class="trainings" id="trainings">
             <div class="container trainings-container">
                 <figure class="trainings-figure">
-                    <img class="trainings-img" src="img/trainings.jpg">
+                    <img class="trainings-img" src="img/training.jpg">
                 </figure>
+                <h2 class="trainings-title trainings-title-mobile">
+                    Безкоштовні психологічні тренінги для одеситів та гостей міста
+                </h2>
                 <div class="trainings-content">
-                    <h2 class="trainings-title">
+                    <h2 class="trainings-title trainings-title-desktop">
                         Безкоштовні психологічні тренінги для одеситів та гостей міста
                     </h2>
                     <h3 class="trainings-subtitle">
@@ -245,14 +305,31 @@
                 </div>
             </div>
         </section>
+        <section class="intro">
+            <div class="container intro-container">
+                <div class="intro-content">
+                    <h2 class="intro-title">
+                        Психологічна підтримка - шлях до життя в гармонії
+                        та задоволенні. 
+                    </h2>
+                    <h3 class="intro-subtitle">
+                        Звертайся за вказаними контактами і ми разом підберемо
+                        найкращий час та оптимальну ціну.
+                    </h3>
+                </div>
+                <figure class="intro-figure">
+                    <img class="intro-img" src="img/intro-meditation-img.png">
+                </figure>
+            </div>
+        </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container footer-container">
             <div class="footer-contacts">
                 <h3 class="footer-title">Контакти</h3>
                 <ul class="footer-list">
                     <li class="footer-item">
-                        Консультації онлайн або в Одесі
+                        Консультації в Одесі або онлайн
                     </li>
                     <li class="footer-item">
                         <a class="footer-link" href="tel:+380930692777">
@@ -271,19 +348,22 @@
                     </a>
                 </li>
                 <li class="social-item">
-                    <a class="social-link social-link-telegram" href="#">  
+                    <a class="social-link social-link-telegram"  href="https://telegram.me/Yuliia_koroi">
+                    </a> 
+                </li>
+                <li class="social-item">
+                    <a class="social-link social-link-viber" href="viber://chat?number=+380930692777">  
                     </a>
                 </li>
                 <li class="social-item">
-                    <a class="social-link social-link-viber" href="#">  
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a class="social-link social-link-watsapp" href="#">  
+                    <a class="social-link social-link-watsapp" href="whatsapp://send?phone=+380930692777">  
                     </a>
                 </li>
             </ul>
         </div>
     </footer>
+
+    <script src="./script/jquery-3.6.0.min.js"></script>
+    <script src="./script/script.js"></script>
 </body>
 </html>
