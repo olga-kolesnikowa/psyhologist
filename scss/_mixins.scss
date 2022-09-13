@@ -39,7 +39,7 @@
 }
 
 @mixin font-primary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
-  font-family: 'Rosario', sans-serif;
+  font-family: 'Inter', sans-serif;
   @if $size {
     font-size: $size;
   }
@@ -57,7 +57,7 @@
   }
 }
 @mixin font-secondary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
-  font-family: 'Rosario', sans-serif;
+  font-family: 'Inter', sans-serif;
   @if $size {
     font-size: $size;
   }
@@ -77,4 +77,52 @@
 
 @mixin border() {
   border: 1px solid #FFECA0;
+}
+
+
+//Media mixin desktop first
+@mixin for-big-desktop-up {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+@mixin for-small-desktop-up {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin for-smalling-desktop-up {
+  @media (max-width: 1440px) {
+    @content;
+  }
+}
+
+@mixin for-desktop-up {
+  @media (max-width: 1280px) {
+    @content;
+  }
+}
+
+@mixin for-middle-tablet-up {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin for-tablet-landscape-up {
+  @media (max-width: 900px) {
+    @content;
+  }
+}
+// @mixin for-tablet-landscape-up {
+//   @media (max-width: 768px) {
+//     @content;
+//   }
+// }
+
+@mixin for-tablet-portrait-up {
+  @media (max-width: 600px) {
+    @content;
+  }
 }
