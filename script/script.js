@@ -1,8 +1,11 @@
-$(document).ready(function() {
-    $('.hamburger').on('click', function() {
-        $('.hamburger').toggleClass('is-active');
-   });
-    $('.hamburger').on('click', function() {
-        $('.nav-mobile').toggleClass('is-active');
-    });
+$(document).ready(function () {
+  $(".hamburger").on("click", function () {
+    $(".hamburger").toggleClass("is-active");
+		$(".nav-mobile").toggleClass("is-active");
+  });
+
+  $(".nav-mobile-link").on("click", function () {
+		$(".hamburger").removeClass("is-active");
+    $(".nav-mobile").removeClass("is-active");
+  });
 });
