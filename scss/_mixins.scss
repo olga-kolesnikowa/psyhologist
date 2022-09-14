@@ -39,7 +39,7 @@
 }
 
 @mixin font-primary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   @if $size {
     font-size: $size;
   }
@@ -57,7 +57,7 @@
   }
 }
 @mixin font-secondary($size: false, $colour: false, $weight: false, $lh: false, $style: false) {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Comfortaa', sans-serif;
   @if $size {
     font-size: $size;
   }
