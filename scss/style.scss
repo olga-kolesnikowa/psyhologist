@@ -215,6 +215,7 @@ body{
         letter-spacing: 0.02em;
         max-width: 580px;
         margin-top: 10px;
+        text-align: justify;
         @include for-desktop-up{
             @include font-primary(20px, $color-text-secondary, 500, 32px);
             max-width: 500px;
