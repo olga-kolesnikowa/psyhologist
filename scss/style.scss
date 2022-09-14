@@ -79,7 +79,7 @@ body{
     }
     &-link{
         display: block;
-        @include font-primary(19px, $color-text-primary, 500, 22px);
+        @include font-primary(18px, $color-text-primary, 500, 22px);
         background-color: $background-color-secondary; 
         padding: 5px 10px;
         box-shadow: 0px 15px 25px rgba(0, 185, 182, 0.05);
