@@ -317,6 +317,7 @@ body{
         @include font-secondary(24px, $color-text-secondary, 500, 32px);
         margin-top: 5px;
         max-width: 600px;
+        text-align: justify;
         @include for-desktop-up{
             @include font-primary(20px, $color-text-secondary, 500, 32px);
             max-width: 550px;
@@ -458,6 +459,7 @@ body{
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        text-align: justify;
         @include for-desktop-up{
             @include font-primary(21px, $color-text-primary, 500, 30px);  
         }
@@ -595,6 +597,7 @@ body{
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        text-align: justify;
         @include for-desktop-up{
             @include font-primary(21px, $color-text-primary, 500, 30px);
         }
@@ -710,6 +713,7 @@ body{
     &-text{
         @include font-primary(24px, $color-text-primary, 500, 30px); 
         margin-top: 20px;
+        text-align: justify;
         @include for-desktop-up{
             @include font-primary(21px, $color-text-primary, 500, 30px);
         }
