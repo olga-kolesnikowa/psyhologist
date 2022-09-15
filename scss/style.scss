@@ -90,6 +90,9 @@ body{
         &:hover{
             background-color: rgba(251, 229, 227, 0.7);
         }
+        @include for-middle-tablet-up{
+            @include font-primary(16px, $color-text-primary, 500, 22px);
+        }
     }
 }
 .nav-mobile{
@@ -155,9 +158,10 @@ body{
         height: 220px * 2;
         border-radius: 20px;
         overflow: hidden;
+        margin-top: 30px;
         @include for-middle-tablet-up{
-            max-width: 170px *2;
-           height: 190px *2;
+            max-width: 160px *2;
+           height: 180px *2;
         }
         @include for-tablet-landscape-up{
             max-width: 200px *2;
@@ -169,6 +173,10 @@ body{
             max-width: 180px *2;
             height: 200px *2;
         }
+    }
+    &-picture{
+        width: 100%;
+        height: 100%;
     }
     &-img{
         display: block;
@@ -256,14 +264,14 @@ body{
     &-figure{
         display: flex;
         flex-shrink: 0;
-        margin-top: 30px;
+        margin-top: 40px;
         width: 200px *2;
         height: 220px * 2;
         border-radius: 20px;
         overflow: hidden;
         @include for-middle-tablet-up{
-            max-width: 170px *2;
-            height: 190px *2;
+            max-width: 160px *2;
+            height: 180px *2;
          }
          @include for-tablet-landscape-up{
             order: 2;  
@@ -275,6 +283,10 @@ body{
             height: 200px * 2;
         }
     }
+    &-picture{
+        width: 100%;
+        height: 100%;
+    }
     &-img{
         display: block;
         object-fit: cover;
@@ -282,7 +294,7 @@ body{
         height: 100%;
     }
     &-title{
-        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include font-primary(45px, $color-text-primary, 700, 57px);
         text-align: center;
         @include for-desktop-up{
             @include font-primary(32px, $color-text-primary, 700, 38px);
@@ -323,7 +335,7 @@ body{
             max-width: 550px;
         }
         @include for-middle-tablet-up{
-            @include font-primary(20px, $color-text-secondary, 500, 28px);
+            @include font-primary(19px, $color-text-secondary, 500, 25px);
         }
         @include for-tablet-landscape-up{
             @include font-secondary(24px, $color-text-secondary, 500, 32px);
@@ -348,7 +360,7 @@ body{
     &-figure{
         display: flex;
         flex-shrink: 0;
-        margin-top: 30px;
+        margin-top: 50px;
         max-width: 200px *2;
         height: 200px * 2;
         border-radius: 20px;
@@ -376,7 +388,7 @@ body{
         height: 100%;
     }
     &-title{
-        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include font-primary(45px, $color-text-primary, 700, 57px);
         @include for-desktop-up{
             @include font-primary(33px, $color-text-primary, 700, 35px);
         }
@@ -401,8 +413,7 @@ body{
         text-align: center;
         @include for-tablet-landscape-up{
             display: block;
-            order: 1;
-            
+            order: 1;  
         }
     }
     &-subtitle{
@@ -440,6 +451,7 @@ body{
             width: 20px;
             height: 20px;
             margin-right: 5px;
+            flex-shrink: 0;
         }
         @include for-desktop-up{
             @include font-primary(20px, $color-text-primary, 400, 32px);
@@ -487,7 +499,7 @@ body{
         }
     }
     &-title{
-        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include font-primary(43px, $color-text-primary, 700, 57px);
         @include for-desktop-up{
             @include font-primary(33px, $color-text-primary, 700, 35px);
         }
@@ -550,6 +562,7 @@ body{
             width: 20px;
             height: 20px;
             margin-right: 5px;
+            flex-shrink: 0;
         }
         @include for-desktop-up{
             @include font-primary(20px, $color-text-primary, 400, 32px);
@@ -569,7 +582,7 @@ body{
     &-figure{
         display: flex;
         flex-shrink: 0;
-        margin-top: 30px;
+        margin-top: 40px;
         max-width: 200px *2;
         height: 200px * 2;
         border-radius: 20px;
@@ -630,7 +643,7 @@ body{
         }
     }
     &-title{
-        @include font-primary(48px, $color-text-primary, 700, 57px);
+        @include font-primary(43px, $color-text-primary, 700, 57px);
         @include for-desktop-up{
             @include font-primary(30px, $color-text-primary, 700, 38px);
         }
@@ -754,6 +767,10 @@ body{
             max-width: 200px *2;
             height: 180px * 2;
         }
+    }
+    &-picture{
+        width: 100%;
+        height: 100%;
     }
     &-img{
         display: block;
