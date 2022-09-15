@@ -236,7 +236,7 @@ body{
             max-width: 650px;
         }
         @include for-tablet-portrait-up{
-            @include font-primary(20px, $color-text-secondary, 500, 28px);
+            @include font-primary(20px, $color-text-secondary, 500, 25px);
             max-width: 500px;
         }
     }
@@ -329,7 +329,7 @@ body{
         @include font-secondary(24px, $color-text-secondary, 500, 32px);
         margin-top: 5px;
         max-width: 600px;
-        text-align: justify;
+        // text-align: justify;
         @include for-desktop-up{
             @include font-primary(20px, $color-text-secondary, 500, 32px);
             max-width: 550px;
@@ -342,7 +342,7 @@ body{
             max-width: 650px;
         }
         @include for-tablet-portrait-up{
-            @include font-primary(20px, $color-text-secondary, 500, 28px);
+            @include font-primary(20px, $color-text-secondary, 500, 25px);
             max-width: 500px;
         }
     }
